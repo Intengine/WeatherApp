@@ -11,9 +11,10 @@ namespace WeatherApp
         public MainForm()
         {
             InitializeComponent();
+            getWeather();
         }
 
-        void getWeather(string city)
+        void getWeather()
         {
             using(WebClient web = new WebClient())
             {
