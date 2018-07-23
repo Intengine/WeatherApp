@@ -5,18 +5,25 @@ namespace WeatherApp
     public class WeatherForecast
     {
         public city city { get; set; }
-        public List<list> list { get; set; } // forecast list
+        public List<list> list { get; set; }
     }
 
-    public class temp
+    public class main
     {
-        public double day { get; set; }
+        public double temp { get; set; }
+        public double pressure { get; set; }
+        public double humidity { get; set; }
     }
 
     public class weather
     {
-        public string main { get; set; } // weather condition
+        public string main { get; set; }
         public string description { get; set; }
+    }
+
+    public class wind
+    {
+        public double speed { get; set; }
     }
 
     public class city
@@ -24,14 +31,16 @@ namespace WeatherApp
         public string name { get; set; }
     }
 
+    public class daytime
+    {
+        public double dt { get; set; }
+    }
+
     public class list
     {
-        public double dt { get; set; } // day in milliseconds
-        public double pressure { get; set; } // hpa
-        public double humidity { get; set; } // %
-        public double speed { get; set; } // wind speed in km/h
-
-        public temp temp { get; set; }
+        public double dt { get; set; }
+        public wind wind { get; set; }
+        public main main { get; set; }
         public List<weather> weather { get; set; }
     }
 }

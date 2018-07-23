@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Text;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -13,8 +14,8 @@ namespace WeatherApp
         public MainForm()
         {
             InitializeComponent();
-            getWeather("Bielsko-Biała"); // one day weather
-            getForecast("Bielsko-Biała"); // more than one day
+            getWeather("Bielsko-Biala"); // one day weather
+            getForecast("Bielsko-Biala"); // more than one day
         }
 
         void getWeather(string city)
@@ -37,8 +38,7 @@ namespace WeatherApp
         {
             using(WebClient web = new WebClient())
             {
-                int day = 5;
-                string url = string.Format("http://api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&cnt={1}&APPID={2}", city, day, APPID);
+                string url = string.Format("http://api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&APPID={1}", city, APPID);
                 var json = web.DownloadString(url);
                 var result = JsonConvert.DeserializeObject<WeatherForecast>(json);
 
@@ -47,14 +47,20 @@ namespace WeatherApp
                 labelDay.Text = string.Format("{0}", getDate(forecast.list[1].dt).DayOfWeek);
                 labelCondition.Text = string.Format("{0}", forecast.list[1].weather[0].main);
                 labelDescription.Text = string.Format("{0}", forecast.list[1].weather[0].description);
-                labelTemp.Text = string.Format("{0} \u00B0" + "C", forecast.list[1].temp);
-                labelWind.Text = string.Format("{0} km/h", forecast.list[1].speed);
+                labelTemp.Text = string.Format("{0} \u00B0" + "C", forecast.list[1].main.temp);
+                labelWind.Text = string.Format("{0} km/h", forecast.list[1].wind.speed);
 
-                labelDay2.Text = string.Format("{0}", getDate(forecast.list[2].dt).DayOfWeek);
-                labelCondition2.Text = string.Format("{0}", forecast.list[2].weather[0].main);
-                labelDescription2.Text = string.Format("{0}", forecast.list[2].weather[0].description);
-                labelTemp2.Text = string.Format("{0} \u00B0" + "C", forecast.list[2].temp);
-                labelWind2.Text = string.Format("{0} km/h", forecast.list[2].speed);
+                labelDay2.Text = string.Format("{0}", getDate(forecast.list[9].dt).DayOfWeek);
+                labelCondition2.Text = string.Format("{0}", forecast.list[9].weather[0].main);
+                labelDescription2.Text = string.Format("{0}", forecast.list[9].weather[0].description);
+                labelTemp2.Text = string.Format("{0} \u00B0" + "C", forecast.list[9].main.temp);
+                labelWind2.Text = string.Format("{0} km/h", forecast.list[9].wind.speed);
+
+                labelDay3.Text = string.Format("{0}", getDate(forecast.list[17].dt).DayOfWeek);
+                labelCondition3.Text = string.Format("{0}", forecast.list[17].weather[0].main);
+                labelDescription3.Text = string.Format("{0}", forecast.list[17].weather[0].description);
+                labelTemp3.Text = string.Format("{0} \u00B0" + "C", forecast.list[17].main.temp);
+                labelWind3.Text = string.Format("{0} km/h", forecast.list[17].wind.speed);
             }
         }
 

@@ -44,9 +44,16 @@
             this.labelCondition2 = new System.Windows.Forms.Label();
             this.labelDay2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.labelTemp3 = new System.Windows.Forms.Label();
+            this.labelWind3 = new System.Windows.Forms.Label();
+            this.labelDescription3 = new System.Windows.Forms.Label();
+            this.labelCondition3 = new System.Windows.Forms.Label();
+            this.labelDay3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCityName
@@ -162,7 +169,7 @@
             this.labelTemp2.AutoSize = true;
             this.labelTemp2.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelTemp2.ForeColor = System.Drawing.Color.Gray;
-            this.labelTemp2.Location = new System.Drawing.Point(695, 282);
+            this.labelTemp2.Location = new System.Drawing.Point(695, 283);
             this.labelTemp2.Name = "labelTemp2";
             this.labelTemp2.Size = new System.Drawing.Size(36, 26);
             this.labelTemp2.TabIndex = 16;
@@ -173,7 +180,7 @@
             this.labelWind2.AutoSize = true;
             this.labelWind2.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelWind2.ForeColor = System.Drawing.Color.Gray;
-            this.labelWind2.Location = new System.Drawing.Point(695, 254);
+            this.labelWind2.Location = new System.Drawing.Point(695, 255);
             this.labelWind2.Name = "labelWind2";
             this.labelWind2.Size = new System.Drawing.Size(93, 26);
             this.labelWind2.TabIndex = 15;
@@ -184,7 +191,7 @@
             this.labelDescription2.AutoSize = true;
             this.labelDescription2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelDescription2.ForeColor = System.Drawing.Color.Gray;
-            this.labelDescription2.Location = new System.Drawing.Point(562, 305);
+            this.labelDescription2.Location = new System.Drawing.Point(562, 306);
             this.labelDescription2.Name = "labelDescription2";
             this.labelDescription2.Size = new System.Drawing.Size(94, 19);
             this.labelDescription2.TabIndex = 14;
@@ -195,7 +202,7 @@
             this.labelCondition2.AutoSize = true;
             this.labelCondition2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelCondition2.ForeColor = System.Drawing.Color.Gray;
-            this.labelCondition2.Location = new System.Drawing.Point(562, 286);
+            this.labelCondition2.Location = new System.Drawing.Point(562, 287);
             this.labelCondition2.Name = "labelCondition2";
             this.labelCondition2.Size = new System.Drawing.Size(90, 19);
             this.labelCondition2.TabIndex = 13;
@@ -206,7 +213,7 @@
             this.labelDay2.AutoSize = true;
             this.labelDay2.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelDay2.ForeColor = System.Drawing.Color.Gray;
-            this.labelDay2.Location = new System.Drawing.Point(560, 254);
+            this.labelDay2.Location = new System.Drawing.Point(560, 255);
             this.labelDay2.Name = "labelDay2";
             this.labelDay2.Size = new System.Drawing.Size(55, 23);
             this.labelDay2.TabIndex = 12;
@@ -215,18 +222,89 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::WeatherApp.Properties.Resources.CloudRain;
-            this.pictureBox3.Location = new System.Drawing.Point(488, 254);
+            this.pictureBox3.Location = new System.Drawing.Point(488, 255);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(68, 70);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 11;
             this.pictureBox3.TabStop = false;
             // 
+            // labelTemp3
+            // 
+            this.labelTemp3.AutoSize = true;
+            this.labelTemp3.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTemp3.ForeColor = System.Drawing.Color.Gray;
+            this.labelTemp3.Location = new System.Drawing.Point(695, 385);
+            this.labelTemp3.Name = "labelTemp3";
+            this.labelTemp3.Size = new System.Drawing.Size(36, 26);
+            this.labelTemp3.TabIndex = 22;
+            this.labelTemp3.Text = "26";
+            // 
+            // labelWind3
+            // 
+            this.labelWind3.AutoSize = true;
+            this.labelWind3.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelWind3.ForeColor = System.Drawing.Color.Gray;
+            this.labelWind3.Location = new System.Drawing.Point(695, 357);
+            this.labelWind3.Name = "labelWind3";
+            this.labelWind3.Size = new System.Drawing.Size(93, 26);
+            this.labelWind3.TabIndex = 21;
+            this.labelWind3.Text = "12km/h";
+            // 
+            // labelDescription3
+            // 
+            this.labelDescription3.AutoSize = true;
+            this.labelDescription3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDescription3.ForeColor = System.Drawing.Color.Gray;
+            this.labelDescription3.Location = new System.Drawing.Point(562, 408);
+            this.labelDescription3.Name = "labelDescription3";
+            this.labelDescription3.Size = new System.Drawing.Size(94, 19);
+            this.labelDescription3.TabIndex = 20;
+            this.labelDescription3.Text = "Description";
+            // 
+            // labelCondition3
+            // 
+            this.labelCondition3.AutoSize = true;
+            this.labelCondition3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelCondition3.ForeColor = System.Drawing.Color.Gray;
+            this.labelCondition3.Location = new System.Drawing.Point(562, 389);
+            this.labelCondition3.Name = "labelCondition3";
+            this.labelCondition3.Size = new System.Drawing.Size(90, 19);
+            this.labelCondition3.TabIndex = 19;
+            this.labelCondition3.Text = "Conditions";
+            // 
+            // labelDay3
+            // 
+            this.labelDay3.AutoSize = true;
+            this.labelDay3.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDay3.ForeColor = System.Drawing.Color.Gray;
+            this.labelDay3.Location = new System.Drawing.Point(560, 357);
+            this.labelDay3.Name = "labelDay3";
+            this.labelDay3.Size = new System.Drawing.Size(55, 23);
+            this.labelDay3.TabIndex = 18;
+            this.labelDay3.Text = "Days";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::WeatherApp.Properties.Resources.CloudRain;
+            this.pictureBox4.Location = new System.Drawing.Point(488, 357);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(68, 70);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(840, 472);
+            this.Controls.Add(this.labelTemp3);
+            this.Controls.Add(this.labelWind3);
+            this.Controls.Add(this.labelDescription3);
+            this.Controls.Add(this.labelCondition3);
+            this.Controls.Add(this.labelDay3);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.labelTemp2);
             this.Controls.Add(this.labelWind2);
             this.Controls.Add(this.labelDescription2);
@@ -248,6 +326,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,6 +350,12 @@
         private System.Windows.Forms.Label labelCondition2;
         private System.Windows.Forms.Label labelDay2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label labelTemp3;
+        private System.Windows.Forms.Label labelWind3;
+        private System.Windows.Forms.Label labelDescription3;
+        private System.Windows.Forms.Label labelCondition3;
+        private System.Windows.Forms.Label labelDay3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
