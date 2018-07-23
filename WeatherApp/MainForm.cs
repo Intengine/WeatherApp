@@ -12,7 +12,8 @@ namespace WeatherApp
         public MainForm()
         {
             InitializeComponent();
-            getWeather("Bielsko-Biała");
+            getWeather("Bielsko-Biała"); // one day weather
+            getForecast("Bielsko-Biała"); // more than one day
         }
 
         void getWeather(string city)
@@ -28,6 +29,20 @@ namespace WeatherApp
                 labelCityName.Text = string.Format("{0}", outPut.name);
                 labelCountryName.Text = string.Format("{0}", outPut.sys.country);
                 labelScaleName.Text = string.Format("{0} \u00B0" + "C", outPut.main.temp);
+            }
+        }
+
+        void getForecast(string city)
+        {
+            string url = "";
+            using(WebClient web = new WebClient())
+            {
+                var json = web.DownloadString(url);
+                var result = JsonConvert.DeserializeObject<WeatherForecast>(json);
+
+                WeatherForecast forecast = result;
+
+                labelCondition.Text = string.Format("{0}", forecast.list[1].weather[0].main);
             }
         }
     }

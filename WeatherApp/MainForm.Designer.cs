@@ -34,8 +34,8 @@
             this.labelScaleName = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelCondition = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,27 +106,27 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Days";
             // 
-            // label2
+            // labelCondition
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(562, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 19);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Conditions";
+            this.labelCondition.AutoSize = true;
+            this.labelCondition.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelCondition.ForeColor = System.Drawing.Color.Gray;
+            this.labelCondition.Location = new System.Drawing.Point(562, 185);
+            this.labelCondition.Name = "labelCondition";
+            this.labelCondition.Size = new System.Drawing.Size(90, 19);
+            this.labelCondition.TabIndex = 6;
+            this.labelCondition.Text = "Conditions";
             // 
-            // label4
+            // labelDescription
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(562, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 19);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Description";
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelDescription.ForeColor = System.Drawing.Color.Gray;
+            this.labelDescription.Location = new System.Drawing.Point(562, 204);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(94, 19);
+            this.labelDescription.TabIndex = 8;
+            this.labelDescription.Text = "Description";
             // 
             // label3
             // 
@@ -157,8 +157,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelDescription);
+            this.Controls.Add(this.labelCondition);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelScaleName);
@@ -182,8 +182,8 @@
         private System.Windows.Forms.Label labelScaleName;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelCondition;
+        private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
     }
