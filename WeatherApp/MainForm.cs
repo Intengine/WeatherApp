@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System;
+using System.Net;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 
@@ -34,16 +35,35 @@ namespace WeatherApp
 
         void getForecast(string city)
         {
-            string url = "";
             using(WebClient web = new WebClient())
             {
+                int day = 5;
+                string url = string.Format("http://api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&cnt={1}&APPID={2}", city, day, APPID);
                 var json = web.DownloadString(url);
                 var result = JsonConvert.DeserializeObject<WeatherForecast>(json);
 
                 WeatherForecast forecast = result;
 
+                labelDay.Text = string.Format("{0}", getDate(forecast.list[1].dt).DayOfWeek);
                 labelCondition.Text = string.Format("{0}", forecast.list[1].weather[0].main);
+                labelDescription.Text = string.Format("{0}", forecast.list[1].weather[0].description);
+                labelTemp.Text = string.Format("{0} \u00B0" + "C", forecast.list[1].temp);
+                labelWind.Text = string.Format("{0} km/h", forecast.list[1].speed);
+
+                labelDay2.Text = string.Format("{0}", getDate(forecast.list[2].dt).DayOfWeek);
+                labelCondition2.Text = string.Format("{0}", forecast.list[2].weather[0].main);
+                labelDescription2.Text = string.Format("{0}", forecast.list[2].weather[0].description);
+                labelTemp2.Text = string.Format("{0} \u00B0" + "C", forecast.list[2].temp);
+                labelWind2.Text = string.Format("{0} km/h", forecast.list[2].speed);
             }
+        }
+
+        DateTime getDate(double milliseconds)
+        {
+            DateTime day = new System.DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
+            day = day.AddSeconds(milliseconds).ToLocalTime();
+
+            return day;
         }
     }
 }
