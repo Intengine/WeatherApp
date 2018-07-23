@@ -14,8 +14,8 @@ namespace WeatherApp
         public MainForm()
         {
             InitializeComponent();
-            getWeather("Bielsko-Biala"); // one day weather
-            getForecast("Bielsko-Biala"); // more than one day
+            getWeather("Bielsko-Biała"); // one day weather
+            getForecast("Bielsko-Biała"); // more than one day
         }
 
         void getWeather(string city)
@@ -27,6 +27,9 @@ namespace WeatherApp
                 var result = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
 
                 WeatherInfo.root outPut = result;
+
+                byte[] bytes = Encoding.Default.GetBytes(outPut.name);
+                outPut.name = Encoding.UTF8.GetString(bytes);
 
                 labelCityName.Text = string.Format("{0}", outPut.name);
                 labelCountryName.Text = string.Format("{0}", outPut.sys.country);
