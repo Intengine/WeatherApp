@@ -30,9 +30,7 @@
         {
             this.labelCityName = new System.Windows.Forms.Label();
             this.labelCountryName = new System.Windows.Forms.Label();
-            this.pictureMain = new System.Windows.Forms.PictureBox();
             this.labelScaleName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelDay = new System.Windows.Forms.Label();
             this.labelCondition = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
@@ -43,19 +41,22 @@
             this.labelDescription2 = new System.Windows.Forms.Label();
             this.labelCondition2 = new System.Windows.Forms.Label();
             this.labelDay2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelTemp3 = new System.Windows.Forms.Label();
             this.labelWind3 = new System.Windows.Forms.Label();
             this.labelDescription3 = new System.Windows.Forms.Label();
             this.labelCondition3 = new System.Windows.Forms.Label();
             this.labelDay3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.boxSearch = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMain)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.buttonLogo = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureMain = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMain)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCityName
@@ -63,7 +64,7 @@
             this.labelCityName.AutoSize = true;
             this.labelCityName.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelCityName.ForeColor = System.Drawing.Color.Gray;
-            this.labelCityName.Location = new System.Drawing.Point(46, 48);
+            this.labelCityName.Location = new System.Drawing.Point(46, 156);
             this.labelCityName.Name = "labelCityName";
             this.labelCityName.Size = new System.Drawing.Size(427, 47);
             this.labelCityName.TabIndex = 0;
@@ -74,42 +75,22 @@
             this.labelCountryName.AutoSize = true;
             this.labelCountryName.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelCountryName.ForeColor = System.Drawing.Color.Gray;
-            this.labelCountryName.Location = new System.Drawing.Point(48, 95);
+            this.labelCountryName.Location = new System.Drawing.Point(48, 203);
             this.labelCountryName.Name = "labelCountryName";
             this.labelCountryName.Size = new System.Drawing.Size(104, 32);
             this.labelCountryName.TabIndex = 1;
             this.labelCountryName.Text = "Śląskie";
-            // 
-            // pictureMain
-            // 
-            this.pictureMain.Image = global::WeatherApp.Properties.Resources.CloudRain;
-            this.pictureMain.Location = new System.Drawing.Point(54, 153);
-            this.pictureMain.Name = "pictureMain";
-            this.pictureMain.Size = new System.Drawing.Size(100, 89);
-            this.pictureMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureMain.TabIndex = 2;
-            this.pictureMain.TabStop = false;
             // 
             // labelScaleName
             // 
             this.labelScaleName.AutoSize = true;
             this.labelScaleName.Font = new System.Drawing.Font("Century Gothic", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelScaleName.ForeColor = System.Drawing.Color.Gray;
-            this.labelScaleName.Location = new System.Drawing.Point(160, 153);
+            this.labelScaleName.Location = new System.Drawing.Point(160, 261);
             this.labelScaleName.Name = "labelScaleName";
             this.labelScaleName.Size = new System.Drawing.Size(77, 70);
             this.labelScaleName.TabIndex = 3;
             this.labelScaleName.Text = "C";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::WeatherApp.Properties.Resources.CloudRain;
-            this.pictureBox1.Location = new System.Drawing.Point(488, 153);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 70);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // labelDay
             // 
@@ -221,16 +202,6 @@
             this.labelDay2.TabIndex = 12;
             this.labelDay2.Text = "Days";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::WeatherApp.Properties.Resources.CloudRain;
-            this.pictureBox2.Location = new System.Drawing.Point(488, 255);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 70);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            // 
             // labelTemp3
             // 
             this.labelTemp3.AutoSize = true;
@@ -286,16 +257,6 @@
             this.labelDay3.TabIndex = 18;
             this.labelDay3.Text = "Days";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::WeatherApp.Properties.Resources.CloudRain;
-            this.pictureBox3.Location = new System.Drawing.Point(488, 357);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(68, 70);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
             // boxSearch
             // 
             this.boxSearch.Location = new System.Drawing.Point(54, 363);
@@ -313,11 +274,63 @@
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
+            // buttonLogo
+            // 
+            this.buttonLogo.Image = global::WeatherApp.Properties.Resources.logo;
+            this.buttonLogo.Location = new System.Drawing.Point(12, 12);
+            this.buttonLogo.Name = "buttonLogo";
+            this.buttonLogo.Size = new System.Drawing.Size(816, 114);
+            this.buttonLogo.TabIndex = 25;
+            this.buttonLogo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonLogo.UseVisualStyleBackColor = true;
+            this.buttonLogo.Click += new System.EventHandler(this.buttonLogo_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::WeatherApp.Properties.Resources.CloudRain;
+            this.pictureBox3.Location = new System.Drawing.Point(488, 357);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(68, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WeatherApp.Properties.Resources.CloudRain;
+            this.pictureBox2.Location = new System.Drawing.Point(488, 255);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(68, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 11;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WeatherApp.Properties.Resources.CloudRain;
+            this.pictureBox1.Location = new System.Drawing.Point(488, 153);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 70);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureMain
+            // 
+            this.pictureMain.Image = global::WeatherApp.Properties.Resources.CloudRain;
+            this.pictureMain.Location = new System.Drawing.Point(54, 261);
+            this.pictureMain.Name = "pictureMain";
+            this.pictureMain.Size = new System.Drawing.Size(100, 89);
+            this.pictureMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMain.TabIndex = 2;
+            this.pictureMain.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 472);
+            this.Controls.Add(this.buttonLogo);
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.boxSearch);
             this.Controls.Add(this.labelTemp3);
@@ -344,10 +357,10 @@
             this.Controls.Add(this.labelCityName);
             this.Name = "MainForm";
             this.Text = "Intengine Weather";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMain)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,6 +392,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox boxSearch;
         private System.Windows.Forms.Button buttonSearch;
+        private System.Windows.Forms.Button buttonLogo;
     }
 }
 
