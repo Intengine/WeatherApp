@@ -10,7 +10,6 @@ namespace WeatherApp
     public partial class MainForm : Form
     {
         const string APPID = "401df202e10a68a5235956d31061bb5f";
-        string cityName = "Bielsko";
 
         public MainForm()
         {
@@ -23,7 +22,7 @@ namespace WeatherApp
         {
             using(WebClient web = new WebClient())
             {
-                string url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&units=metric&cnt=6", city, APPID);
+                string url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&APPID={1}&units=metric&cnt=6", city, APPID);
                 var json = web.DownloadString(url);
                 var result = JsonConvert.DeserializeObject<WeatherInfo.root>(json);
 
@@ -90,6 +89,15 @@ namespace WeatherApp
             {
                 Image weatherImage = Bitmap.FromStream(weatherIcon);
                 return weatherImage;
+            }
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            if(boxSearch.Text != "")
+            {
+                getWeather(boxSearch.Text);
+                getForecast(boxSearch.Text);
             }
         }
     }

@@ -50,6 +50,8 @@
             this.labelCondition3 = new System.Windows.Forms.Label();
             this.labelDay3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.boxSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -294,11 +296,30 @@
             this.pictureBox3.TabIndex = 17;
             this.pictureBox3.TabStop = false;
             // 
+            // boxSearch
+            // 
+            this.boxSearch.Location = new System.Drawing.Point(54, 363);
+            this.boxSearch.Name = "boxSearch";
+            this.boxSearch.Size = new System.Drawing.Size(383, 20);
+            this.boxSearch.TabIndex = 23;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(218, 389);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch.TabIndex = 24;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 472);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.boxSearch);
             this.Controls.Add(this.labelTemp3);
             this.Controls.Add(this.labelWind3);
             this.Controls.Add(this.labelDescription3);
@@ -356,6 +377,8 @@
         private System.Windows.Forms.Label labelCondition3;
         private System.Windows.Forms.Label labelDay3;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox boxSearch;
+        private System.Windows.Forms.Button buttonSearch;
     }
 }
 
