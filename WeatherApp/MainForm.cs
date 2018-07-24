@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Net;
 using System.Text;
 using System.Windows.Forms;
@@ -73,6 +74,18 @@ namespace WeatherApp
             day = day.AddSeconds(milliseconds).ToLocalTime();
 
             return day;
+        }
+
+        Image setIcon()
+        {
+            string url = "http://openweathermap.org/img/w/10d.png"; // weather icon resource
+            var request = WebRequest.Create(url);
+            using(var response = request.GetResponse())
+            using(var weatherIcon = response.GetResponseStream())
+            {
+                Image weatherImage = Bitmap.FromStream(weatherIcon);
+                return weatherImage;
+            }
         }
     }
 }
