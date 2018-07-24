@@ -30,7 +30,7 @@
         {
             this.labelCityName = new System.Windows.Forms.Label();
             this.labelCountryName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureMain = new System.Windows.Forms.PictureBox();
             this.labelScaleName = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelDay = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.labelCondition3 = new System.Windows.Forms.Label();
             this.labelDay3 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -78,15 +78,15 @@
             this.labelCountryName.TabIndex = 1;
             this.labelCountryName.Text = "Śląskie";
             // 
-            // pictureBox1
+            // pictureMain
             // 
-            this.pictureBox1.Image = global::WeatherApp.Properties.Resources.CloudRain;
-            this.pictureBox1.Location = new System.Drawing.Point(54, 153);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pictureMain.Image = global::WeatherApp.Properties.Resources.CloudRain;
+            this.pictureMain.Location = new System.Drawing.Point(54, 153);
+            this.pictureMain.Name = "pictureMain";
+            this.pictureMain.Size = new System.Drawing.Size(100, 89);
+            this.pictureMain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMain.TabIndex = 2;
+            this.pictureMain.TabStop = false;
             // 
             // labelScaleName
             // 
@@ -318,12 +318,12 @@
             this.Controls.Add(this.labelDay);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelScaleName);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureMain);
             this.Controls.Add(this.labelCountryName);
             this.Controls.Add(this.labelCityName);
             this.Name = "MainForm";
             this.Text = "Intengine Weather";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -336,7 +336,7 @@
 
         private System.Windows.Forms.Label labelCityName;
         private System.Windows.Forms.Label labelCountryName;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureMain;
         private System.Windows.Forms.Label labelScaleName;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelDay;

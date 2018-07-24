@@ -35,6 +35,8 @@ namespace WeatherApp
                 labelCityName.Text = string.Format("{0}", outPut.name);
                 labelCountryName.Text = string.Format("{0}", outPut.sys.country);
                 labelScaleName.Text = string.Format("{0} \u00B0" + "C", outPut.main.temp);
+
+                pictureMain.Image = setIcon(outPut.weather[0].icon);
             }
         }
 
@@ -76,9 +78,9 @@ namespace WeatherApp
             return day;
         }
 
-        Image setIcon()
+        Image setIcon(string iconID)
         {
-            string url = "http://openweathermap.org/img/w/10d.png"; // weather icon resource
+            string url = string.Format("http://openweathermap.org/img/w/{0}.png", iconID); // weather icon resource
             var request = WebRequest.Create(url);
             using(var response = request.GetResponse())
             using(var weatherIcon = response.GetResponseStream())
