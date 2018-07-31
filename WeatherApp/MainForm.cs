@@ -49,26 +49,26 @@ namespace WeatherApp
 
                 WeatherForecast forecast = result;
 
-                labelDay.Text = string.Format("{0}", getDate(forecast.list[9].dt).DayOfWeek);
-                labelCondition.Text = string.Format("{0}", forecast.list[9].weather[0].main);
-                labelDescription.Text = string.Format("{0}", forecast.list[9].weather[0].description);
-                labelTemp.Text = string.Format("{0} \u00B0" + "C", forecast.list[9].main.temp);
-                labelWind.Text = string.Format("{0} km/h", forecast.list[9].wind.speed);
-                pictureBox1.Image = setIcon(forecast.list[9].weather[0].icon);
+                labelDay.Text = string.Format("{0}", getDate(forecast.list[4].dt).DayOfWeek);
+                labelCondition.Text = string.Format("{0}", forecast.list[4].weather[0].main);
+                labelDescription.Text = string.Format("{0}", forecast.list[4].weather[0].description);
+                labelTemp.Text = string.Format("{0} \u00B0" + "C", forecast.list[4].main.temp);
+                labelWind.Text = string.Format("{0} km/h", forecast.list[4].wind.speed);
+                pictureBox1.Image = setIcon(forecast.list[4].weather[0].icon);
 
-                labelDay2.Text = string.Format("{0}", getDate(forecast.list[17].dt).DayOfWeek);
-                labelCondition2.Text = string.Format("{0}", forecast.list[17].weather[0].main);
-                labelDescription2.Text = string.Format("{0}", forecast.list[17].weather[0].description);
-                labelTemp2.Text = string.Format("{0} \u00B0" + "C", forecast.list[17].main.temp);
-                labelWind2.Text = string.Format("{0} km/h", forecast.list[17].wind.speed);
-                pictureBox2.Image = setIcon(forecast.list[17].weather[0].icon);
+                labelDay2.Text = string.Format("{0}", getDate(forecast.list[10].dt).DayOfWeek);
+                labelCondition2.Text = string.Format("{0}", forecast.list[10].weather[0].main);
+                labelDescription2.Text = string.Format("{0}", forecast.list[10].weather[0].description);
+                labelTemp2.Text = string.Format("{0} \u00B0" + "C", forecast.list[10].main.temp);
+                labelWind2.Text = string.Format("{0} km/h", forecast.list[10].wind.speed);
+                pictureBox2.Image = setIcon(forecast.list[10].weather[0].icon);
 
-                labelDay3.Text = string.Format("{0}", getDate(forecast.list[26].dt).DayOfWeek);
-                labelCondition3.Text = string.Format("{0}", forecast.list[26].weather[0].main);
-                labelDescription3.Text = string.Format("{0}", forecast.list[26].weather[0].description);
-                labelTemp3.Text = string.Format("{0} \u00B0" + "C", forecast.list[26].main.temp);
-                labelWind3.Text = string.Format("{0} km/h", forecast.list[26].wind.speed);
-                pictureBox3.Image = setIcon(forecast.list[26].weather[0].icon);
+                labelDay3.Text = string.Format("{0}", getDate(forecast.list[16].dt).DayOfWeek);
+                labelCondition3.Text = string.Format("{0}", forecast.list[16].weather[0].main);
+                labelDescription3.Text = string.Format("{0}", forecast.list[16].weather[0].description);
+                labelTemp3.Text = string.Format("{0} \u00B0" + "C", forecast.list[16].main.temp);
+                labelWind3.Text = string.Format("{0} km/h", forecast.list[16].wind.speed);
+                pictureBox3.Image = setIcon(forecast.list[16].weather[0].icon);
             }
         }
 
