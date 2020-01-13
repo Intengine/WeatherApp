@@ -103,7 +103,7 @@ namespace WeatherApp
 
         private void buttonLogo_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.intengine.beskidy.pl");
+            System.Diagnostics.Process.Start("https://intengine.beskidy.pl");
         }
     }
 }
